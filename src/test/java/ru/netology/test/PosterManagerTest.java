@@ -1,7 +1,7 @@
 package ru.netology.test;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import ru.netology.manager.PosterManager;
 
 public class PosterManagerTest {
@@ -19,7 +19,7 @@ public class PosterManagerTest {
         String[] expected = {"Film 1", "Film 2", "Film 3"};
         String[] actual = manager.findAll();
 
-        Assert.assertArrayEquals(expected, actual);
+        Assertions.assertArrayEquals(expected, actual);
     }
 
     @Test
@@ -29,7 +29,7 @@ public class PosterManagerTest {
         String[] expected = {"Film 1"};
         String[] actual = manager.findAll();
 
-        Assert.assertArrayEquals(expected, actual);
+        Assertions.assertArrayEquals(expected, actual);
     }
 
     @Test
@@ -38,7 +38,7 @@ public class PosterManagerTest {
         String[] expected = {};
         String[] actual = manager.findAll();
 
-        Assert.assertArrayEquals(expected, actual);
+        Assertions.assertArrayEquals(expected, actual);
     }
 
 //    Последние добавленные фильмы, выведенные в обратном порядке.
@@ -55,7 +55,7 @@ public class PosterManagerTest {
         String[] expected = {"Film 5", "Film 4", "Film 3", "Film 2", "Film 1"};
         String[] actual = manager.findLast();
 
-        Assert.assertArrayEquals(expected, actual);
+        Assertions.assertArrayEquals(expected, actual);
     }
 
     @Test
@@ -70,7 +70,7 @@ public class PosterManagerTest {
         String[] expected = {"Film 6", "Film 5", "Film 4", "Film 3", "Film 2"};
         String[] actual = manager.findLast();
 
-        Assert.assertArrayEquals(expected, actual);
+        Assertions.assertArrayEquals(expected, actual);
     }
 
     @Test
@@ -82,7 +82,7 @@ public class PosterManagerTest {
         String[] expected = {"Film 3", "Film 2", "Film 1"};
         String[] actual = manager.findLast();
 
-        Assert.assertArrayEquals(expected, actual);
+        Assertions.assertArrayEquals(expected, actual);
     }
 
 }
